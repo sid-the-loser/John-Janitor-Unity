@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Common
+namespace Sid.Scripts.Common
 {
     public class PlayerInput : MonoBehaviour
     {

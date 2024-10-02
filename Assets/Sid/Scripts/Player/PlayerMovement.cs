@@ -1,9 +1,7 @@
-using System;
-using Common;
-using Unity.VisualScripting;
+using Sid.Scripts.Common;
 using UnityEngine;
 
-namespace Sid
+namespace Sid.Scripts.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
@@ -28,10 +26,11 @@ namespace Sid
         private Vector3 _currentVel = Vector3.zero;
         private float _headRotationX = 0f;
         private float _headRotationY = 0f;
+
+        private KeyCode _crouchKey = KeyCode.LeftControl;
         
         private CapsuleCollider _playerCollisionShape;
         private Rigidbody _playerRigidbody;
-        
         
         private void Start()
         {
@@ -45,6 +44,15 @@ namespace Sid
             // syncing head rotation
             _headRotationX = headObject.transform.rotation.x;
             _headRotationY = headObject.transform.rotation.y;
+
+            if (Application.isEditor)
+                // DEV LOG (2:00 am : 02-Oct-2024)
+                // ------------------------------------------------------------------------------------------
+                // This check had to be done because unity is made by a couple of toddlers with computers who
+                // think disabling editor hotkeys when running in game mode is "dumb".
+                // ------------------------------------------------------------------------------------------
+                _crouchKey = KeyCode.C;
+
         }
 
         
@@ -55,19 +63,13 @@ namespace Sid
                 ToggleMouseCapture(true);
                 
                 // crouch and speed logic
-                if (Input.GetKey(KeyCode.LeftControl))
+                if (Input.GetKey(_crouchKey))
                 {
                     _currentSpeed = crouchingSpeed;
                 }
                 else if (!_headWillCollide)
                 {
-                    // DEV LOG (2:00 am : 02-Oct-2024)
-                    // ------------------------------------------------------------------------------------------
-                    // This check had to be done because unity is made by a couple of toddlers with computers who
-                    // think disabling editor hotkeys when running in game mode is "dumb".
-                    // ------------------------------------------------------------------------------------------
-                    if (!Application.isEditor) _currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintingSpeed : walkingSpeed;
-                    else _currentSpeed = Input.GetKey(KeyCode.C) ? sprintingSpeed : walkingSpeed;
+                    _currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintingSpeed : walkingSpeed;
                 }
                 
                 // movement logic
@@ -82,6 +84,7 @@ namespace Sid
 
                 if (_direction != Vector3.zero)
                 {
+                    print(_currentSpeed);
                     _currentVel.x = _direction.x * _currentSpeed;
                     _currentVel.z = _direction.z * _currentSpeed;
                 }

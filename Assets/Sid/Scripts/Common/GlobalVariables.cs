@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Common
+namespace Sid.Scripts.Common
 {
     public static class GlobalVariables
     {
