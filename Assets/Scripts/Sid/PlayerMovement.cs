@@ -17,7 +17,7 @@ namespace Sid
         [SerializeField] private float crouchCameraY = -0.25f;
         [SerializeField] private float crouchColliderHeight = 1.5f;
         [SerializeField] private float crouchColliderY = -0.25f;
-        [SerializeField] private float gravity = -9.8f;
+        // [SerializeField] private float gravity = -9.8f; // No need since we using a rigidbody
         
         private float _currentSpeed = 5.0f;
         private Vector3 _direction = Vector3.zero;
@@ -54,6 +54,22 @@ namespace Sid
             {
                 ToggleMouseCapture(true);
                 
+                // crouch and speed logic
+                if (Input.GetKey(KeyCode.LeftControl))
+                {
+                    _currentSpeed = crouchingSpeed;
+                }
+                else if (!_headWillCollide)
+                {
+                    // DEV LOG (2:00 am : 02-Oct-2024)
+                    // ------------------------------------------------------------------------------------------
+                    // This check had to be done because unity is made by a couple of toddlers with computers who
+                    // think disabling editor hotkeys when running in game mode is "dumb".
+                    // ------------------------------------------------------------------------------------------
+                    if (!Application.isEditor) _currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintingSpeed : walkingSpeed;
+                    else _currentSpeed = Input.GetKey(KeyCode.C) ? sprintingSpeed : walkingSpeed;
+                }
+                
                 // movement logic
                 _currentVel = _playerRigidbody.velocity;
                 
@@ -62,7 +78,7 @@ namespace Sid
                 if (_grounded && Input.GetKeyDown(KeyCode.Space)) _currentVel.y = jumpVelocity;
                 
                 UpdateInputDirectionWASD();
-                _direction = Vector3.Lerp(_direction, transform.rotation * _inputDirection.normalized, Time.deltaTime * lerpSpeed);
+                _direction = Vector3.Lerp(_direction, (transform.rotation * _inputDirection).normalized, Time.deltaTime * lerpSpeed);
 
                 if (_direction != Vector3.zero)
                 {
@@ -75,8 +91,6 @@ namespace Sid
                     _currentVel = Vector3.MoveTowards(_currentVel, Vector3.zero, _currentSpeed);
                     _currentVel.y = tempY;
                 }
-                
-                // transform.position += transform.rotation * new Vector3(0,0,1) * Time.deltaTime;
                 
                 _playerRigidbody.velocity = _currentVel;
 
@@ -94,8 +108,7 @@ namespace Sid
                 ToggleMouseCapture(false);
             }
             
-            // TODO: remove when after build
-            // if (Input.GetKey(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
+            if (!Application.isEditor) if (Input.GetKey(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
         }
         
 
