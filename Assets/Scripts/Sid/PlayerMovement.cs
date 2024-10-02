@@ -1,3 +1,4 @@
+using System;
 using Common;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,29 +26,35 @@ namespace Sid
         private bool _canMove = false;
         private bool _grounded = false;
         private Vector3 _currentVel = Vector3.zero;
+        private float _headRotationX = 0f;
+        private float _headRotationY = 0f;
         
         private CapsuleCollider _playerCollisionShape;
         private Rigidbody _playerRigidbody;
-        private Transform _playerTransform;
         
-        void Start()
+        
+        private void Start()
         {
             // getting all the components
             _playerCollisionShape = GetComponent<CapsuleCollider>();
             _playerRigidbody = GetComponent<Rigidbody>();
-            _playerTransform = GetComponent<Transform>();
             
-            // cursor control
-            // Cursor.lockState = CursorLockMode.Confined;
-            // Cursor.visible = false;
-
+            // disabling capsule rendering to prevent mesh clipping the camera
+            GetComponent<MeshRenderer>().enabled = false;
+            
+            // syncing head rotation
+            _headRotationX = headObject.transform.rotation.x;
+            _headRotationY = headObject.transform.rotation.y;
         }
 
-        // Update is called once per frame
-        void Update()
+        
+        private void Update()
         {
             if (!GlobalVariables.Paused)
             {
+                ToggleMouseCapture(true);
+                
+                // movement logic
                 _currentVel = _playerRigidbody.velocity;
                 
                 _grounded = _currentVel.y == 0;
@@ -55,7 +62,7 @@ namespace Sid
                 if (_grounded && Input.GetKeyDown(KeyCode.Space)) _currentVel.y = jumpVelocity;
                 
                 UpdateInputDirectionWASD();
-                _direction = Vector3.Lerp(_direction, _inputDirection.normalized, Time.deltaTime * lerpSpeed);
+                _direction = Vector3.Lerp(_direction, transform.rotation * _inputDirection.normalized, Time.deltaTime * lerpSpeed);
 
                 if (_direction != Vector3.zero)
                 {
@@ -69,9 +76,28 @@ namespace Sid
                     _currentVel.y = tempY;
                 }
                 
+                // transform.position += transform.rotation * new Vector3(0,0,1) * Time.deltaTime;
+                
                 _playerRigidbody.velocity = _currentVel;
+
+                // mouse logic
+                _headRotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+                _headRotationY += Input.GetAxis("Mouse X") * mouseSensitivity;
+
+                _headRotationX = Mathf.Clamp(_headRotationX, -89f, 89f);
+
+                headObject.transform.localEulerAngles = new Vector3(_headRotationX, 0, 0);
+                transform.localEulerAngles = new Vector3(0, _headRotationY, 0);
             }
+            else
+            {
+                ToggleMouseCapture(false);
+            }
+            
+            // TODO: remove when after build
+            // if (Input.GetKey(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
         }
+        
 
         private void UpdateInputDirectionWASD()
         {
@@ -100,6 +126,14 @@ namespace Sid
             {
                 _inputDirection.x = 0;
             }
+        }
+
+
+        private void ToggleMouseCapture(bool flag)
+        {
+            // cursor control
+            Cursor.lockState = flag ? CursorLockMode.Confined : CursorLockMode.None;
+            Cursor.visible = !flag;
         }
     }
 }

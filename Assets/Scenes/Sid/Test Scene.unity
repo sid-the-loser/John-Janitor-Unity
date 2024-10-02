@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 208340688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18144253, y: -0.34101358, z: 0.057266373}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -343,12 +343,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121a147710d424845bded9e890ca7564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headObject: {fileID: 0}
+  headObject: {fileID: 781889833}
   jumpVelocity: 4.5
   walkingSpeed: 5
   sprintingSpeed: 8
   crouchingSpeed: 3
-  mouseSensitivity: 0.4
+  mouseSensitivity: 1
   lerpSpeed: 10
   crouchCameraY: -0.25
   crouchColliderHeight: 1.5
@@ -374,9 +374,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.5
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: -0.25, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &781889833
 GameObject:
   m_ObjectHideFlags: 0
