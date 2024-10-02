@@ -5,63 +5,48 @@ using UnityEngine.EventSystems;
 namespace Udey.Scripts
 {
     /// Manages the selection and appearance changes of a card object in a Unity environment.
-    public class CardSelectionHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler,
-        IDeselectHandler
+    public class CardSelectionHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler
     {
-        /// Amount by which the card is vertically moved during selection.
-        [SerializeField] private float vertMoveAmount = 30f;
+        [SerializeField] private float vertMoveAmount = 30f; //Amount by which the card is vertically moved during selection.
+        [SerializeField] private float moveTime = 0.1f; //The amount of time, in seconds, it takes for the card to complete its movement animation.
+        [Range(0f, 2f)] [SerializeField] private float scaleFactor = 1.25f; //A factor by which the card's scale is changed during selection animations. Range between 0 and 2.
 
-        /// The amount of time, in seconds, it takes for the card to complete its movement animation.
-        [SerializeField] private float moveTime = 0.1f;
+        private Vector3 _startPos; //Stores the initial position of the card.
+        private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
 
-        /// A factor by which the card's scale is increased or decreased during selection animations.
-        /// This value can range between 0 and 2, with the default value set to 1.25f.
-        [Range(0f, 2f)] [SerializeField] private float scaleFactor = 1.25f;
-
-        /// Stores the initial position of the card.
-        private Vector3 _startPos;
-
-        /// Stores the initial scale of the card before any transformations are applied.
-        private Vector3 _startScale;
-
-        /// Initializes the CardSelectionHandler class, setting default values for vertical movement,
-        /// animation time, and scale factor. Also captures the initial position and scale of the card.
-        private void Start()
+        private void Start() //Also captures the initial position and scale of the card.
         {
             _startPos = transform.position;
             _startScale = transform.localScale;
         }
 
-        /// Handles the event when the selection is deselected.
-        public void OnDeselect(BaseEventData eventData)
+        #region Animations
+
+        public void OnDeselect(BaseEventData eventData) //Handles the event when the selection is deselected.
         {
             StartCoroutine(MoveCards(false));
         }
 
-        /// Handles the event when the pointer enters the card's area.
-        public void OnPointerEnter(PointerEventData eventData)
+        public void OnPointerEnter(PointerEventData eventData) //Handles the event when the pointer enters the card's area.
         {
             eventData.selectedObject = gameObject;
         }
 
-        /// Called when the pointer exits the UI element.
-        public void OnPointerExit(PointerEventData eventData)
+        public void OnPointerExit(PointerEventData eventData) //Called when the pointer exits the UI element.
         {
             eventData.selectedObject = null;
         }
 
-        /// Called when the card is selected.
-        /// This method initiates the card movement coroutine to animate the card's position.
-        public void OnSelect(BaseEventData eventData)
+        public void OnSelect(BaseEventData eventData) //Called when the card is selected. Initiates the card movement coroutine to animate the card's position.
         {
             StartCoroutine(MoveCards(true));
         }
 
-        /// Moves the card vertically and scales it up or down over time depending on the value of the parameter.
-        /// <param name="startingOfAnimation">
-        ///     If true, moves the card up and scales it up; if false, moves the card back to its
-        ///     original position and scale.
-        /// </param>
+        /* Moves the card vertically and scales it up or down over time depending on the value of the parameter.
+         <param name="startingOfAnimation">
+             If true, moves the card up and scales it up; if false, moves the card back to its
+             original position and scale.
+         </param> */
         private IEnumerator MoveCards(bool startingOfAnimation)
         {
             var runningTime = 0f;
@@ -91,5 +76,7 @@ namespace Udey.Scripts
                 yield return null;
             }
         }
+
+        #endregion
     }
 }
