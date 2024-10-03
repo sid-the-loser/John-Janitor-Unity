@@ -186,11 +186,14 @@ MonoBehaviour:
   walkingSpeed: 5
   sprintingSpeed: 8
   crouchingSpeed: 3
-  mouseSensitivity: 1
+  mouseSensitivity: 2
   lerpSpeed: 10
   crouchCameraY: -0.25
   crouchColliderHeight: 1.5
   crouchColliderY: -0.25
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8639020061274149024
 GameObject:
   m_ObjectHideFlags: 0

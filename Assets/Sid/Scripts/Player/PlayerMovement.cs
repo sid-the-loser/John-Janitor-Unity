@@ -1,3 +1,4 @@
+using System;
 using Sid.Scripts.Common;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace Sid.Scripts.Player
         [SerializeField] private float crouchColliderHeight = 1.5f;
         [SerializeField] private float crouchColliderY = -0.25f;
         // [SerializeField] private float gravity = -9.8f; // No need since we using a rigidbody
+        [SerializeField] private LayerMask groundMask;
         
         private float _currentSpeed = 5.0f;
         private Vector3 _direction = Vector3.zero;
@@ -31,6 +33,7 @@ namespace Sid.Scripts.Player
         
         private CapsuleCollider _playerCollisionShape;
         private Rigidbody _playerRigidbody;
+
         
         private void Start()
         {
@@ -62,29 +65,31 @@ namespace Sid.Scripts.Player
             {
                 ToggleMouseCapture(true);
                 
+                
                 // crouch and speed logic
                 if (Input.GetKey(_crouchKey))
                 {
                     _currentSpeed = crouchingSpeed;
+                    // TODO: Add head lowering, collider lowering and head collision checks (maybe done in next release)
+                    // TODO[UNRELATED_TO_THIS_SCRIPT]: Work on enemies, basic melee and projectile enemies
                 }
                 else if (!_headWillCollide)
                 {
                     _currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintingSpeed : walkingSpeed;
                 }
                 
-                // movement logic
                 _currentVel = _playerRigidbody.velocity;
                 
-                _grounded = _currentVel.y == 0;
-                
-                if (_grounded && Input.GetKeyDown(KeyCode.Space)) _currentVel.y = jumpVelocity;
+                if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    _currentVel.y = jumpVelocity;
+                }
                 
                 UpdateInputDirectionWASD();
                 _direction = Vector3.Lerp(_direction, (transform.rotation * _inputDirection).normalized, Time.deltaTime * lerpSpeed);
 
                 if (_direction != Vector3.zero)
                 {
-                    print(_currentSpeed);
                     _currentVel.x = _direction.x * _currentSpeed;
                     _currentVel.z = _direction.z * _currentSpeed;
                 }
@@ -113,7 +118,14 @@ namespace Sid.Scripts.Player
             
             if (!Application.isEditor) if (Input.GetKey(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
         }
-        
+
+
+        private bool IsGrounded()
+        {
+            print(transform.position);
+            return Physics.SphereCast(transform.position, 0.9f, Vector3.down, out RaycastHit hit, 0.5f, groundMask);
+        }
+
 
         private void UpdateInputDirectionWASD()
         {
