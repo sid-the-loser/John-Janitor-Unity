@@ -45,7 +45,8 @@ namespace Sid.Scripts.PauseMenu
         public void MainMenuLoad()
         {
             GlobalVariables.Paused = false;
-            Debug.Log("Functionality not added yet!");
+            SceneManager.LoadScene("PlaceHolder");
+            // Debug.Log("Functionality not added yet!");
         }
     }
 }
