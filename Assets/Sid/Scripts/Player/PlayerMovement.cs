@@ -63,6 +63,7 @@ namespace Sid.Scripts.Player
         {
             if (!GlobalVariables.Paused)
             {
+                _playerRigidbody.isKinematic = false;
                 ToggleMouseCapture(true);
                 
                 
@@ -113,16 +114,20 @@ namespace Sid.Scripts.Player
             }
             else
             {
+                _playerRigidbody.isKinematic = true;
                 ToggleMouseCapture(false);
             }
             
-            if (!Application.isEditor) if (Input.GetKey(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
+            if (!Application.isEditor)
+            {
+                if (Input.GetKeyDown(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
+            }
+            if (Input.GetKeyDown(KeyCode.P)) GlobalVariables.Paused = !GlobalVariables.Paused;
         }
 
 
         private bool IsGrounded()
         {
-            print(transform.position);
             return Physics.SphereCast(transform.position, 0.9f, Vector3.down, out RaycastHit hit, 0.5f, groundMask);
         }
 
