@@ -1,12 +1,14 @@
+using System;
 using Sid.Scripts.Common;
 using Sid.Scripts.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Sid.Scripts.Enemy
 {
     public class BasicMeleeEnemy : MonoBehaviour
     {
-        [SerializeField] private float enemySpeed = 3.0f;
+        private static float enemySpeed = 3.0f;
         
         private GameObject _player;
         private Rigidbody _rigidbody;
@@ -28,6 +30,9 @@ namespace Sid.Scripts.Enemy
             if (!GlobalVariables.Paused)
             {
                 _rigidbody.isKinematic = false;
+                
+                print(enemySpeed);
+                
                 if (_player is not null)
                 {
                     var currentVel = Vector3.zero;
@@ -45,6 +50,19 @@ namespace Sid.Scripts.Enemy
                 _rigidbody.isKinematic = true;
             }
 
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+
+        public static void UpdateStats()
+        {
+            enemySpeed = GlobalVariables.MoveSpeed;
         }
     }
 }

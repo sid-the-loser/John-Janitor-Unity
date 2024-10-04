@@ -167,7 +167,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &3509323685784068311
 MonoBehaviour:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headObject: {fileID: 989885652219958022}
-  jumpVelocity: 4.5
+  jumpVelocity: 7
   walkingSpeed: 5
   sprintingSpeed: 8
   crouchingSpeed: 3

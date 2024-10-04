@@ -63,8 +63,8 @@ namespace Sid.Scripts.Player
         {
             if (!GlobalVariables.Paused)
             {
-                _playerRigidbody.isKinematic = false;
-                ToggleMouseCapture(true);
+                // _playerRigidbody.isKinematic = false;
+                // ToggleMouseCapture(true);
                 
                 
                 // crouch and speed logic
@@ -114,15 +114,9 @@ namespace Sid.Scripts.Player
             }
             else
             {
-                _playerRigidbody.isKinematic = true;
-                ToggleMouseCapture(false);
+                // _playerRigidbody.isKinematic = true;
+                // ToggleMouseCapture(false);
             }
-            
-            if (!Application.isEditor)
-            {
-                if (Input.GetKeyDown(KeyCode.Escape)) GlobalVariables.Paused = !GlobalVariables.Paused;
-            }
-            if (Input.GetKeyDown(KeyCode.P)) GlobalVariables.Paused = !GlobalVariables.Paused;
         }
 
 
@@ -159,14 +153,6 @@ namespace Sid.Scripts.Player
             {
                 _inputDirection.x = 0;
             }
-        }
-
-
-        private void ToggleMouseCapture(bool flag)
-        {
-            // cursor control
-            Cursor.lockState = flag ? CursorLockMode.Confined : CursorLockMode.None;
-            Cursor.visible = !flag;
         }
     }
 }

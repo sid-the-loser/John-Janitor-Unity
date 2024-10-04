@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuManager : MonoBehaviour
+namespace Sid.Scripts.MainMenu
 {
-    void Start()
+    public class MainMenuManager : MonoBehaviour
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
+        void Start()
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
-    void Update()
-    {
+        void Update()
+        {
         
-    }
+        }
 
-    public void LoadTestLevel()
-    {
-        SceneManager.LoadScene("Test Scene");
-    }
+        public void LoadTestLevel()
+        {
+            SceneManager.LoadScene("Test Scene");
+        }
 
-    public void QuitGameButton()
-    {
-        Application.Quit();
+        public void QuitGameButton()
+        {
+            Application.Quit();
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sid.Scripts.Common;
+using Sid.Scripts.Enemy;
 using UnityEngine;
 using TMPro;
 using Random = UnityEngine.Random;
@@ -18,20 +19,6 @@ namespace Udey.Scripts
         [Header("Descriptions")] [SerializeField] private TMP_Text[] descriptions = new TMP_Text[3];
         private List<int> _option;
         private const string ErrorMessage = "error";
-        
-        #endregion
-        #region StatVer
-        
-        private float _maxHealth = GlobalVariables.MaxHealth;
-        private float _baseDamage = GlobalVariables.BaseDamage;
-        private float _baseHpRegen = GlobalVariables.BaseHpRegen;
-        private float _attSpeed = GlobalVariables.AttSpeed;
-        private float _moveSpeed = GlobalVariables.MoveSpeed;
-        private float _attRange = GlobalVariables.AttRange;
-        private float _baseDefense = GlobalVariables.BaseDefense;
-        private float _dodgeChance = GlobalVariables.DodgeChance;
-        private float _critChance = GlobalVariables.CritChance;
-        private float _critDamage = GlobalVariables.CritDamage;
         
         #endregion
         
@@ -53,6 +40,8 @@ namespace Udey.Scripts
         private void DeactivateCardDropDown()
         {
             cardDropDownPrefab.SetActive(false);
+            BasicMeleeEnemy.UpdateStats();
+            GlobalVariables.Paused = false;
         }
         private void Update()
         {
@@ -141,37 +130,37 @@ namespace Udey.Scripts
             switch (pickedOption)
             {
                 case "Increase Enemy Health":
-                    _maxHealth = _maxHealth * 1.10f;
+                    GlobalVariables.MaxHealth *= 1.10f;
                     break;
                 case "Increase Enemy Damage":
-                    _baseDamage = _baseDamage * 1.10f;
+                    GlobalVariables.BaseDamage *= 1.10f;
                     break;
                 case "Increase Enemy Health Regeneration":
-                    _baseHpRegen = _baseHpRegen * 1.05f;
+                    GlobalVariables.BaseHpRegen *= 1.05f;
                     break;
                 case "Increase Enemy Attack Speed":
-                    _attSpeed = _attSpeed * 1.05f;
+                    GlobalVariables.AttSpeed *= 1.05f;
                     break;
                 case "Increase Enemy Movement Speed":
-                    _moveSpeed = _moveSpeed * 1.10f;
+                    GlobalVariables.MoveSpeed *= 1.10f;
                     break;
                 case "Increase Enemy Attack Range":
-                    _attRange = _attRange * 1.15f;
+                    GlobalVariables.AttRange *= 1.15f;
                     break;
                 case "Not Added Yet":
                     Debug.Log("Not Added Yet");
                     break;
                 case "Increase Enemy Defence":
-                    _baseDefense = _baseDefense * 1.10f;
+                    GlobalVariables.BaseDefense *= 1.10f;
                     break;
                 case "Increase Enemy Dodge Chance":
-                    _dodgeChance = _dodgeChance + (_dodgeChance*0.05f);
+                    GlobalVariables.DodgeChance += (GlobalVariables.DodgeChance*0.05f);
                     break;
                 case "Increase Enemy Critical Chance":
-                    _critChance = _critChance + (_critChance*0.05f);
+                    GlobalVariables.CritChance += (GlobalVariables.CritChance*0.05f);
                     break;
                 case "Increase Enemy Critical Damage":
-                    _critDamage = _critDamage + (_critDamage*0.02f);
+                    GlobalVariables.CritDamage += (GlobalVariables.CritDamage*0.02f);
                     break;
             }
         }
