@@ -31,8 +31,6 @@ namespace Sid.Scripts.Enemy
             {
                 _rigidbody.isKinematic = false;
                 
-                print(enemySpeed);
-                
                 if (_player is not null)
                 {
                     var currentVel = Vector3.zero;
