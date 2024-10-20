@@ -672,8 +672,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Test/Test.fspro
-  sourceBankPath: Test/Build
+  sourceProjectPath: Fmod Project/JohnLevelTestG.fspro
+  sourceBankPath: Fmod Project/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
