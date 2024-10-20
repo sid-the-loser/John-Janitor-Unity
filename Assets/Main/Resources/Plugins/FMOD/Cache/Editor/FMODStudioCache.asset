@@ -174,7 +174,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master/Master.strings
-  lastModified: 638649775784787855
+  lastModified: 638649835987107586
   FileSizes:
   - Name: Desktop
     Value: 1460
@@ -194,7 +194,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master/Master
-  lastModified: 638649775784715786
+  lastModified: 638649835987097599
   FileSizes:
   - Name: Desktop
     Value: 2271104
@@ -232,7 +232,7 @@ MonoBehaviour:
   - {fileID: -71846910593386838}
   StringsBanks:
   - {fileID: -892258955050307713}
-  cacheTime: 638649775851682517
+  cacheTime: 638649835987337580
   cacheVersion: 131620
 --- !u!114 &988491805819331257
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/Master/SFX
-  lastModified: 638649775851682517
+  lastModified: 638649835987337580
   FileSizes:
   - Name: Desktop
     Value: 5984000
@@ -374,7 +374,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Master/Character
-  lastModified: 638649775785294355
+  lastModified: 638649835986987598
   FileSizes:
   - Name: Desktop
     Value: 33984
