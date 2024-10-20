@@ -1,6 +1,8 @@
 using System;
 using Sid.Scripts.Common;
 using UnityEngine;
+using FMOD.Studio;
+using Sound.Scripts; //sound
 
 namespace Sid.Scripts.Player
 {
@@ -34,6 +36,8 @@ namespace Sid.Scripts.Player
         private CapsuleCollider _playerCollisionShape;
         private Rigidbody _playerRigidbody;
 
+        private EventInstance _playerWalk; // sound
+
         
         private void Start()
         {
@@ -56,6 +60,7 @@ namespace Sid.Scripts.Player
                 // ------------------------------------------------------------------------------------------
                 _crouchKey = KeyCode.C;
 
+            _playerWalk = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.Walk);
         }
 
         
@@ -111,11 +116,14 @@ namespace Sid.Scripts.Player
 
                 headObject.transform.localEulerAngles = new Vector3(_headRotationX, 0, 0);
                 transform.localEulerAngles = new Vector3(0, _headRotationY, 0);
+                
+                UpdateSound();
             }
             else
             {
                 // _playerRigidbody.isKinematic = true;
                 // ToggleMouseCapture(false);
+                UpdateSound();
             }
         }
 
@@ -153,6 +161,25 @@ namespace Sid.Scripts.Player
             {
                 _inputDirection.x = 0;
             }
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void UpdateSound() //sound
+        {
+            if((_playerRigidbody.velocity.x != 0 || _playerRigidbody.velocity.z != 0) && IsGrounded())
+            {
+                PLAYBACK_STATE playbackState;
+                _playerWalk.getPlaybackState(out playbackState);
+                if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    _playerWalk.start();
+                }
+            }
+            else
+            {
+                _playerWalk.stop(STOP_MODE.IMMEDIATE);
+            }
+                
         }
     }
 }
