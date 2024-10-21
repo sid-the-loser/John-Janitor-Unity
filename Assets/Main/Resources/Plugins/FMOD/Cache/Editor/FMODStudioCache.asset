@@ -174,7 +174,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master/Master.strings
-  lastModified: 638649835987107586
+  lastModified: 638650659228087351
   FileSizes:
   - Name: Desktop
     Value: 1460
@@ -194,10 +194,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master/Master
-  lastModified: 638649835987097599
+  lastModified: 638650659228017492
   FileSizes:
   - Name: Desktop
-    Value: 2271104
+    Value: 2270080
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -232,7 +232,7 @@ MonoBehaviour:
   - {fileID: -71846910593386838}
   StringsBanks:
   - {fileID: -892258955050307713}
-  cacheTime: 638649835987337580
+  cacheTime: 638650659228087351
   cacheVersion: 131620
 --- !u!114 &988491805819331257
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/Master/SFX
-  lastModified: 638649835987337580
+  lastModified: 638650580118308792
   FileSizes:
   - Name: Desktop
     Value: 5984000
@@ -374,10 +374,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Master/Character
-  lastModified: 638649835986987598
+  lastModified: 638650549244413648
   FileSizes:
   - Name: Desktop
-    Value: 33984
+    Value: 33696
   Exists: 1
 --- !u!114 &7517778355104351651
 MonoBehaviour:
@@ -400,7 +400,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 6479014261499949559}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
