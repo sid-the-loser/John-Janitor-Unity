@@ -47,8 +47,8 @@ public class PickUp : MonoBehaviour
             {
                 objTransform.parent = null;
                 objRigidbody.useGravity = true;
-                crosshair1.SetActive(true);
-                crosshair2.SetActive(false);
+               // crosshair1.SetActive(true);
+               // crosshair2.SetActive(false);
                 interactable = false;
                 pickedup = false;
             }
@@ -56,8 +56,10 @@ public class PickUp : MonoBehaviour
     }
     void Update()
     {
+        crosshair2.SetActive(false);   
         if (interactable == true)
         {
+            crosshair2.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E)) //pickup
             {
             
@@ -79,6 +81,7 @@ public class PickUp : MonoBehaviour
             
             if(pickedup == true)
             {
+                crosshair2.SetActive(false);
                 objRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
                 if (Input.GetMouseButtonDown(1)) //throw
                 {
@@ -94,6 +97,7 @@ public class PickUp : MonoBehaviour
             }
             else
             {
+                
                 objRigidbody.constraints &= ~RigidbodyConstraints.FreezeRotation;
             }
         }
