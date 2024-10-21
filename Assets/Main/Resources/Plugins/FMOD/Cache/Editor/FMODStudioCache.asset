@@ -1,86 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7886014433985196092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
-  Guid:
-    Data1: 61536917
-    Data2: 1158968452
-    Data3: -241192530
-    Data4: -1211663391
-  Banks:
-  - {fileID: 5188721574356480841}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 10000
---- !u!114 &-7572268327175853943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tech Sounds/Mouse 1
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Tech Sounds/Mouse 1
-  Guid:
-    Data1: 1604047165
-    Data2: 1282440192
-    Data3: -511012689
-    Data4: 1391516786
-  Banks:
-  - {fileID: 5188721574356480841}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 10000
---- !u!114 &-6358278051674655967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
-  Guid:
-    Data1: 1872822432
-    Data2: 1137818332
-    Data3: 1033468847
-    Data4: 75936795
-  Banks:
-  - {fileID: 5188721574356480841}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 10000
 --- !u!114 &-4953001100631194886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +27,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4419762264404794938
+--- !u!114 &-4598464155409859449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
+  Guid:
+    Data1: -516879228
+    Data2: 1231266367
+    Data3: 1136307364
+    Data4: -579736789
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &-4288411996330592865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,11 +120,38 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master/Master.strings
-  lastModified: 638650659228087351
+  lastModified: 638650784303303372
   FileSizes:
   - Name: Desktop
     Value: 1460
   Exists: 1
+--- !u!114 &-138212091845487712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Mouse 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Mouse 1
+  Guid:
+    Data1: 1604047165
+    Data2: 1282440192
+    Data3: -511012689
+    Data4: 1391516786
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &-71846910593386838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,10 +167,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master/Master
-  lastModified: 638650659228017492
+  lastModified: 638650784303273346
   FileSizes:
   - Name: Desktop
-    Value: 2270080
+    Value: 2270336
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -221,18 +194,18 @@ MonoBehaviour:
   - {fileID: -4953001100631194886}
   - {fileID: 7517778355104351651}
   - {fileID: 9039492944943728958}
-  - {fileID: -7572268327175853943}
-  - {fileID: 2164397448807838647}
-  - {fileID: -7886014433985196092}
-  - {fileID: 6226352944199174090}
-  - {fileID: -6358278051674655967}
-  - {fileID: -4419762264404794938}
+  - {fileID: -138212091845487712}
+  - {fileID: -4598464155409859449}
+  - {fileID: 7754954098040166141}
+  - {fileID: 5218549419730666201}
+  - {fileID: 5411240508818433094}
+  - {fileID: -4288411996330592865}
   EditorParameters: []
   MasterBanks:
   - {fileID: -71846910593386838}
   StringsBanks:
   - {fileID: -892258955050307713}
-  cacheTime: 638650659228087351
+  cacheTime: 638650796547659173
   cacheVersion: 131620
 --- !u!114 &988491805819331257
 MonoBehaviour:
@@ -258,33 +231,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2164397448807838647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
-  Guid:
-    Data1: -516879228
-    Data2: 1231266367
-    Data3: 1136307364
-    Data4: -579736789
-  Banks:
-  - {fileID: 5188721574356480841}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 10000
 --- !u!114 &2360226624026186603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,12 +273,12 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/Master/SFX
-  lastModified: 638650580118308792
+  lastModified: 638650779157336841
   FileSizes:
   - Name: Desktop
-    Value: 5984000
+    Value: 5984032
   Exists: 1
---- !u!114 &6226352944199174090
+--- !u!114 &5218549419730666201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,6 +305,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14884
+--- !u!114 &5411240508818433094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
+  Guid:
+    Data1: 1872822432
+    Data2: 1137818332
+    Data3: 1033468847
+    Data4: 75936795
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &6479014261499949559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,10 +347,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Master/Character
-  lastModified: 638650549244413648
+  lastModified: 638650796547659173
   FileSizes:
   - Name: Desktop
-    Value: 33696
+    Value: 33984
   Exists: 1
 --- !u!114 &7517778355104351651
 MonoBehaviour:
@@ -406,6 +379,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 600
+--- !u!114 &7754954098040166141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
+  Guid:
+    Data1: 61536917
+    Data2: 1158968452
+    Data3: -241192530
+    Data4: -1211663391
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &9039492944943728958
 MonoBehaviour:
   m_ObjectHideFlags: 0
