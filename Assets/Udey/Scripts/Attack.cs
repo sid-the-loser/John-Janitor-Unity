@@ -1,5 +1,6 @@
 using System.Collections;
 using Sound.Scripts;
+using Sound.Scripts.Sound;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;

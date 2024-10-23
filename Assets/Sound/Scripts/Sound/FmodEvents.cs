@@ -1,8 +1,7 @@
-using UnityEngine;
 using FMODUnity;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+using UnityEngine;
 
-namespace Sound.Scripts
+namespace Sound.Scripts.Sound
 {
     public class FmodEvents : MonoBehaviour
     {

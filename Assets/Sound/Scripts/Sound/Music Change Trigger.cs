@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sound.Scripts
+namespace Sound.Scripts.Sound
 {
     public class MusicChangeTrigger : MonoBehaviour
     {

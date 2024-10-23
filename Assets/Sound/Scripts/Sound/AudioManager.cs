@@ -1,8 +1,8 @@
-using FMODUnity;
 using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
-namespace Sound.Scripts
+namespace Sound.Scripts.Sound
 {
     public class AudioManager : MonoBehaviour
     {

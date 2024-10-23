@@ -2,7 +2,7 @@ using FMODUnity;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Sound.Scripts
+namespace Sound.Scripts.Sound
 {
     public class Keyboard : MonoBehaviour
     {

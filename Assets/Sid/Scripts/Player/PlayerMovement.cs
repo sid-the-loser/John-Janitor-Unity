@@ -2,7 +2,8 @@ using System;
 using Sid.Scripts.Common;
 using UnityEngine;
 using FMOD.Studio;
-using Sound.Scripts; //sound
+using Sound.Scripts;
+using Sound.Scripts.Sound; //sound
 
 namespace Sid.Scripts.Player
 {
