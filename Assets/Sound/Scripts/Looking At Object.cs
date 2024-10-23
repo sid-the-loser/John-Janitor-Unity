@@ -1,27 +1,42 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class LookingAtObject : MonoBehaviour
+namespace Sound.Scripts
 {
-    [SerializeField] private List<GameObject> children = new List<GameObject>();
-    private void OnTriggerEnter(Collider other)
+    public class LookingAtObject : MonoBehaviour
     {
-        if (other.CompareTag("Interactable Object"))
+        [SerializeField] private List<GameObject> children = new List<GameObject>();
+        private void OnTriggerStay(Collider other)
         {
-            children.Clear();
-            foreach (Transform child in other.transform)
+            if (other.CompareTag("Interactable Object"))
             {
-                children.Add(child.gameObject);
+                Debug.Log("Entered chair");
+                children.Clear();
+                foreach (Transform child in other.transform)
+                {
+                    children.Add(child.gameObject);
+                }
+
+                foreach (var child in children)
+                {
+                    var shader = child.GetComponent<Renderer>().material.shader;
+                    if (shader != null)
+                    {
+                        child.GetComponent<Renderer>().material.SetFloat("_ActiveRim", 1);
+                    }
+                }
             }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
             foreach (var child in children)
             {
                 var shader = child.GetComponent<Renderer>().material.shader;
                 if (shader != null)
                 {
-                    child.GetComponent<Renderer>().material.SetFloat("_ActiveRim", 1);
+                    child.GetComponent<Renderer>().material.SetFloat("_ActiveRim", 0);
                 }
             }
         }
