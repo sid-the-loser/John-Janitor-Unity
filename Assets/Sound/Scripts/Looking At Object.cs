@@ -11,7 +11,6 @@ namespace Sound.Scripts
         {
             if (other.CompareTag("Interactable Object"))
             {
-                Debug.Log("Entered chair");
                 children.Clear();
                 foreach (Transform child in other.transform)
                 {
