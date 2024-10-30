@@ -8,23 +8,19 @@ Shader "Custom/Rim lighting Shader"
         _RampTex("Ramp Texture", 2D) = "White" {}
         _ActiveRim("Active Rim", Range(0, 1)) = 1
     }
-
     SubShader
     {
         Tags
         {
             "Queue" = "Transparent"
         }
-
         Pass
         {
             ZWrite On
             ColorMask 0
         }
-
         CGPROGRAM
         #pragma surface surf ToonRamp
-
 
         float4 _Color;
         float4 _RimColor;
@@ -44,12 +40,10 @@ Shader "Custom/Rim lighting Shader"
             c.a = s.Alpha;
             return c;
         }
-
         struct Input
         {
             float3 viewDir;
         };
-
         void surf(Input IN, inout SurfaceOutput o)
         {
             if (_ActiveRim > 0.5)

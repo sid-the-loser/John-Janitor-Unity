@@ -1,6 +1,6 @@
 Shader "Custom/Item Shader"
 {
-     Properties
+    Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
         _RampTex ("Ramp Texture", 2D) = "White" {}
@@ -13,7 +13,7 @@ Shader "Custom/Item Shader"
         float4 _Color;
         sampler2D _RampTex;
 
-        float4 LightingToonRamp (SurfaceOutput s, fixed3 lightDir, fixed atten)
+        float4 LightingToonRamp(SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
             float diff = dot(s.Normal, lightDir);
             float h = diff * 0.5 + 0.5;
@@ -25,12 +25,10 @@ Shader "Custom/Item Shader"
             c.a = s.Alpha;
             return c;
         }
-
         struct Input
         {
             float2 uv_MainTex;
         };
-
         void surf(Input IN, inout SurfaceOutput o)
         {
             o.Albedo = _Color.rgb;
