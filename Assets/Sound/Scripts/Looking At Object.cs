@@ -7,6 +7,9 @@ namespace Sound.Scripts
     public class LookingAtObject : MonoBehaviour
     {
         [SerializeField] private List<GameObject> children = new List<GameObject>();
+
+        
+
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("Interactable Object"))
