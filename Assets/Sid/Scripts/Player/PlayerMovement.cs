@@ -1,6 +1,9 @@
 using System;
 using Sid.Scripts.Common;
 using UnityEngine;
+using FMOD.Studio;
+using Sound.Scripts;
+using Sound.Scripts.Sound; //sound
 
 namespace Sid.Scripts.Player
 {
@@ -34,6 +37,8 @@ namespace Sid.Scripts.Player
         private CapsuleCollider _playerCollisionShape;
         private Rigidbody _playerRigidbody;
 
+        private EventInstance _playerWalk; // sound
+
         
         private void Start()
         {
@@ -56,6 +61,7 @@ namespace Sid.Scripts.Player
                 // ------------------------------------------------------------------------------------------
                 _crouchKey = KeyCode.C;
 
+            _playerWalk = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.Walk);
         }
 
         
@@ -111,6 +117,8 @@ namespace Sid.Scripts.Player
 
                 headObject.transform.localEulerAngles = new Vector3(_headRotationX, 0, 0);
                 transform.localEulerAngles = new Vector3(0, _headRotationY, 0);
+                
+                
             }
             else
             {
@@ -131,28 +139,53 @@ namespace Sid.Scripts.Player
             if (Input.GetKey(KeyCode.W))
             {
                 _inputDirection.z = 1;
+                UpdateSound();
             } 
             else if (Input.GetKey(KeyCode.S))
             {
                 _inputDirection.z = -1;
+                UpdateSound();
             }
             else
             {
                 _inputDirection.z = 0;
+                UpdateSound();
             }
 
             if (Input.GetKey(KeyCode.D))
             {
                 _inputDirection.x = 1;
+                UpdateSound();
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 _inputDirection.x = -1;
+                UpdateSound();
             }
             else
             {
                 _inputDirection.x = 0;
+                UpdateSound();
             }
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void UpdateSound() //sound
+        {
+            if((Mathf.Abs(_playerRigidbody.velocity.x) >= 0.5f || Mathf.Abs(_playerRigidbody.velocity.z) >= 0.5f) && IsGrounded())
+            {
+                PLAYBACK_STATE playbackState;
+                _playerWalk.getPlaybackState(out playbackState);
+                if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    _playerWalk.start();
+                }
+            }
+            else
+            {
+                _playerWalk.stop(STOP_MODE.IMMEDIATE);
+            }
+                
         }
     }
 }

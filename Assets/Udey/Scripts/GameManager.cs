@@ -50,6 +50,7 @@ namespace Udey.Scripts
                 GlobalVariables.Paused = true;
             }
         }
+        
 
         #region RNG
 

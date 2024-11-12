@@ -1,6 +1,158 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1489635191267849537
+--- !u!114 &-4953001100631194886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Noises/Weapon/Swing
+  m_EditorClassIdentifier: 
+  Path: event:/Character Noises/Weapon/Swing
+  Guid:
+    Data1: -343728985
+    Data2: 1095942870
+    Data3: -148957549
+    Data4: 1685853086
+  Banks:
+  - {fileID: 6479014261499949559}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4598464155409859449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 1
+  Guid:
+    Data1: -516879228
+    Data2: 1231266367
+    Data3: 1136307364
+    Data4: -579736789
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &-4288411996330592865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambient Sound/Rain/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambient Sound/Rain/Rain
+  Guid:
+    Data1: -103810889
+    Data2: 1171149292
+    Data3: -1369718901
+    Data4: 57596483
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59000
+--- !u!114 &-3411647050658795432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Number of Enemies
+  m_EditorClassIdentifier: 
+  Name: Number of Enemies
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1786378252
+    data2: 1623835067
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-892258955050307713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod Project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master/Master.strings
+  lastModified: 638669583904403777
+  FileSizes:
+  - Name: Desktop
+    Value: 1460
+  Exists: 1
+--- !u!114 &-138212091845487712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Mouse 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Mouse 1
+  Guid:
+    Data1: 1604047165
+    Data2: 1282440192
+    Data3: -511012689
+    Data4: 1391516786
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &-71846910593386838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,13 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Test/Build/Desktop/Master.bank
+  Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638647950835826146
+  StudioPath: bank:/Master/Master
+  lastModified: 638669583904393776
   FileSizes:
   - Name: Desktop
-    Value: 2506
+    Value: 2270336
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -33,19 +185,53 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6380980758195725288}
-  - {fileID: -1489635191267849537}
+  - {fileID: -892258955050307713}
+  - {fileID: -71846910593386838}
+  - {fileID: 6479014261499949559}
+  - {fileID: 5188721574356480841}
   EditorEvents:
-  - {fileID: 2916013830435995797}
-  - {fileID: 4345553221538300982}
+  - {fileID: 2360226624026186603}
+  - {fileID: -4953001100631194886}
+  - {fileID: 7517778355104351651}
+  - {fileID: 9039492944943728958}
+  - {fileID: -138212091845487712}
+  - {fileID: -4598464155409859449}
+  - {fileID: 7754954098040166141}
+  - {fileID: 5218549419730666201}
+  - {fileID: 5411240508818433094}
+  - {fileID: -4288411996330592865}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1489635191267849537}
+  - {fileID: -71846910593386838}
   StringsBanks:
-  - {fileID: 6380980758195725288}
-  cacheTime: 638647950835836120
+  - {fileID: -892258955050307713}
+  cacheTime: 638669583904966690
   cacheVersion: 131620
---- !u!114 &2916013830435995797
+--- !u!114 &988491805819331257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/health
+  m_EditorClassIdentifier: 
+  Name: health
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 2599551037
+    data2: 2709744981
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2360226624026186603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,43 +241,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Banan
+  m_Name: event:/Character Noises/Weapon/Throw
   m_EditorClassIdentifier: 
-  Path: event:/Banan
+  Path: event:/Character Noises/Weapon/Throw
   Guid:
-    Data1: 821420050
-    Data2: 1258171475
-    Data3: -1437843838
-    Data4: -2128648945
+    Data1: -535823028
+    Data2: 1339681358
+    Data3: -1015064181
+    Data4: -704266296
   Banks:
-  - {fileID: -1489635191267849537}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4345553221538300982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/hi
-  m_EditorClassIdentifier: 
-  Path: event:/hi
-  Guid:
-    Data1: -27829163
-    Data2: 1137297921
-    Data3: 1807242165
-    Data4: -1047818607
-  Banks:
-  - {fileID: -1489635191267849537}
+  - {fileID: 6479014261499949559}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -99,7 +258,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6380980758195725288
+--- !u!114 &5188721574356480841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,13 +268,170 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: Test/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638647950835836120
+  Path: Fmod Project/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/Master/SFX
+  lastModified: 638669583904966690
   FileSizes:
   - Name: Desktop
-    Value: 800
+    Value: 5984000
   Exists: 1
+--- !u!114 &5218549419730666201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambient Sound/Air Vents/Air Vent
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambient Sound/Air Vents/Air Vent
+  Guid:
+    Data1: -29327464
+    Data2: 1181027301
+    Data3: -523415400
+    Data4: 111186155
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14884
+--- !u!114 &5411240508818433094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
+  Guid:
+    Data1: 1872822432
+    Data2: 1137818332
+    Data3: 1033468847
+    Data4: 75936795
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &6479014261499949559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Character.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod Project/Build/Desktop/Character.bank
+  Name: Character
+  StudioPath: bank:/Master/Character
+  lastModified: 638669583904184723
+  FileSizes:
+  - Name: Desktop
+    Value: 33984
+  Exists: 1
+--- !u!114 &7517778355104351651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Noises/Movement/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Noises/Movement/Walking
+  Guid:
+    Data1: 397851058
+    Data2: 1080139480
+    Data3: 1936279994
+    Data4: -298899085
+  Banks:
+  - {fileID: 6479014261499949559}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &7754954098040166141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 2
+  Guid:
+    Data1: 61536917
+    Data2: 1158968452
+    Data3: -241192530
+    Data4: -1211663391
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &9039492944943728958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music
+  Guid:
+    Data1: 1974431080
+    Data2: 1149713798
+    Data3: -33501509
+    Data4: -1120830776
+  Banks:
+  - {fileID: -71846910593386838}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3411647050658795432}
+  - {fileID: 988491805819331257}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 383282
