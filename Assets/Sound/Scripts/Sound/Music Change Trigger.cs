@@ -5,7 +5,7 @@ namespace Sound.Scripts.Sound
 {
     public class MusicChangeTrigger : MonoBehaviour
     {
-        public int enemyCounter;
+        public static int enemyCounter;
         private readonly List<GameObject> _enemiesInTrigger = new List<GameObject>();
         private void OnTriggerEnter(Collider other)
         {
