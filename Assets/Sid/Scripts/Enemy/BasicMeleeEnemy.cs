@@ -1,4 +1,5 @@
 using System;
+using FMOD.Studio;
 using Sid.Scripts.Common;
 using Sid.Scripts.Player;
 using UnityEngine;
@@ -12,11 +13,15 @@ namespace Sid.Scripts.Enemy
         
         private GameObject _player;
         private Rigidbody _rigidbody;
+
+        private FMOD.Studio.Bus _bus;
         
         void Start()
         {
             _player = GameObject.FindWithTag("Player");
             _rigidbody = GetComponent<Rigidbody>();
+
+            _bus = FMODUnity.RuntimeManager.GetBus("bus:/");
 
             if (_player is null)
             {
@@ -55,6 +60,8 @@ namespace Sid.Scripts.Enemy
             if (other.gameObject.CompareTag("Player"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+                _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
             }
         }
 
