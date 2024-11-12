@@ -1,6 +1,7 @@
 using UnityEngine;
 using FMODUnity;
 using Sound.Scripts;
+using Sound.Scripts.Sound;
 using UnityEngine.Serialization;
 
 public class PickUp : MonoBehaviour

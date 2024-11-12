@@ -19,6 +19,8 @@ namespace Sid.Temp.Scripts
             if (other.CompareTag("Player"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Camera.main.GetComponent<ScreenCameraShader>().ColorLUTShader.SetColor("_myColor", Color.white);
+                Camera.main.GetComponent<ScreenCameraShader>().ColorLUTShader.SetFloat("_Contribution", 0.0002f);
             }
             else if (other.CompareTag("Enemy"))
             {

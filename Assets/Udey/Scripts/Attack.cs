@@ -1,8 +1,7 @@
 using System.Collections;
-using Sound.Scripts;
-using Unity.VisualScripting;
+using Sound.Scripts.Sound;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 namespace Udey.Scripts
 {
@@ -10,7 +9,17 @@ namespace Udey.Scripts
     {
         [SerializeField] private GameObject image;
         [SerializeField] private float attackCooldown = 2f;
-        private float _nextAttackTime = 0f;
+
+        private float _nextAttackTime;
+        private Vector3 _camPos;
+        private Camera _camera;
+
+        private GameObject _otherHit;
+
+        private void Start()
+        {
+            _camera = Camera.main;
+        }
 
         void Update()
         {
@@ -18,6 +27,20 @@ namespace Udey.Scripts
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    if (_camera)
+                    {
+                        _camPos = _camera.transform.position;
+
+                        Debug.DrawRay(_camPos, _camera.transform.forward * 10f, Color.red);
+
+                        if (Physics.Raycast(_camPos, _camera.transform.forward, out var hit, 10f))
+                        {
+                            if (hit.transform.CompareTag("Enemy"))
+                            {
+                                StartCoroutine(FlashColor(hit.transform.gameObject));
+                            }
+                        }
+                    }
                     StartCoroutine(FakeAnimation());
                     _nextAttackTime = Time.time + attackCooldown;
                 }
@@ -30,6 +53,13 @@ namespace Udey.Scripts
             AudioManager.Instance.PlayOneShot(FmodEvents.Instance.Swing, this.transform.position);
             yield return new WaitForSeconds(0.2f); // Wait for 0.1 seconds
             image.transform.Rotate(0, 0, -25); // Rotate image back to normal
+        }
+
+        private IEnumerator FlashColor(GameObject hit)
+        {
+            hit.GetComponent<Renderer>().material.SetColor("_RimColor", Color.white);
+            yield return new WaitForSeconds(0.1f);
+            hit.GetComponent<Renderer>().material.SetColor("_RimColor", new Color32(128,0,0,0));
         }
     }
 }
