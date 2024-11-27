@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PURPLE
+  m_Name: Desk Mat
   m_Shader: {fileID: 4800000, guid: 9c54ac31ee59530468aa848c731714e6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 40f7929387b7067488c8f806abf11642, type: 3}
-        m_Scale: {x: -3.58, y: 1}
+        m_Scale: {x: -3.07, y: 1}
         m_Offset: {x: -3.63, y: 1.32}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -68,7 +68,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.061
     - _GlossyReflections: 1
-    - _Metallic: 0.546
+    - _Metallic: 0.757
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
