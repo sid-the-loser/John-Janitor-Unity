@@ -1,5 +1,3 @@
-// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
-
 Shader "Custom/Glass Shader"
 {
     Properties {
