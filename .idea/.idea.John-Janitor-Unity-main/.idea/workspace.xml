@@ -7,10 +7,21 @@
     <list default="true" id="1f73552e-dc27-49ae-8e2b-e141d3e6d39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.John-Janitor-Unity-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.John-Janitor-Unity-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Main/Resources/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Resources/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sid/Scripts/Enemy/BasicMeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sid/Scripts/Enemy/BasicMeleeEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sound/SoundTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/SoundTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Toon Shaders/Toon Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Toon Shaders/Toon Material 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Toon Shaders/Toon Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Toon Shaders/Toon Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Brick/Brick Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Brick/Brick Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Dirty Cel/Dirty cel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Dirty Cel/Dirty cel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Glass/Glass Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Glass/Glass Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Metal Desk/PURPLE.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Metal Desk/PURPLE.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/Rim Lighting/Rim lighting Shader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/Rim Lighting/Rim lighting Shader.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Texture/wood/plywood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sound/Texture/wood/plywood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{0620021f-3df0-40ff-b0b5-0c367dadde71}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{0620021f-3df0-40ff-b0b5-0c367dadde71}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{4c14d346-953e-4394-a255-3ca899f8c1cc}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{4c14d346-953e-4394-a255-3ca899f8c1cc}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{5fbc36d6-28ea-4e10-acc4-84e53278dbde}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{5fbc36d6-28ea-4e10-acc4-84e53278dbde}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{7ab173a7-a5cf-4a63-8129-055e6c17c995}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{7ab173a7-a5cf-4a63-8129-055e6c17c995}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{c6dc3afd-50aa-482b-89d1-02294ddb6ee1}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{c6dc3afd-50aa-482b-89d1-02294ddb6ee1}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.cache/{cc5d31f0-4508-4add-863d-d4d482098e22}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/Fmod Project/.cache/{cc5d31f0-4508-4add-863d-d4d482098e22}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.unsaved/Metadata/Event/{75af6d68-3d86-4487-bbce-00fec87a31bd}.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fmod Project/.unsaved/metadataFileMapping.data" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Sound/Texture/ColourGrading/CameraColour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.28/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -32,18 +44,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "u__misc",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;u__misc&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Unity.exe" />
@@ -94,7 +106,8 @@
       <workItem from="1729545124550" duration="1632000" />
       <workItem from="1730196151498" duration="655000" />
       <workItem from="1730245357704" duration="4421000" />
-      <workItem from="1731387433971" duration="1298000" />
+      <workItem from="1731387433971" duration="1897000" />
+      <workItem from="1732694013964" duration="8539000" />
     </task>
     <servers />
   </component>
