@@ -2930,6 +2930,13 @@ MonoBehaviour:
       Data3: -33501509
       Data4: -1120830776
     Path: event:/Music/Music
+  <DeathSound>k__BackingField:
+    Guid:
+      Data1: -2027091958
+      Data2: 1193458681
+      Data3: -779741777
+      Data4: -1159706397
+    Path: event:/Music/Death Sound
   <Walk>k__BackingField:
     Guid:
       Data1: 397851058
@@ -2991,6 +2998,20 @@ MonoBehaviour:
       Data3: 1033468847
       Data4: 75936795
     Path: event:/SFX/Tech Sounds/Keyboard/Keyboards 3
+  <CardsHover>k__BackingField:
+    Guid:
+      Data1: 1821610975
+      Data2: 1285143301
+      Data3: -881051517
+      Data4: 455019610
+    Path: event:/SFX/Card Selection/Card Hover
+  <CardsSelect>k__BackingField:
+    Guid:
+      Data1: 945929587
+      Data2: 1134399371
+      Data3: -270394694
+      Data4: -762123829
+    Path: event:/SFX/Card Selection/Caed Selection
 --- !u!4 &383772534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7616579037371484840, guid: 0d9761d063b193747ad5ec0bb36a0b6d, type: 3}
@@ -14052,6 +14073,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1880879703}
   - {fileID: 2118728934}
   - {fileID: 717364902}
   - {fileID: 85077688}
@@ -14062,7 +14084,6 @@ SceneRoots:
   - {fileID: 857098436}
   - {fileID: 1848826569}
   - {fileID: 1191246385}
-  - {fileID: 1880879703}
   - {fileID: 874350615}
   - {fileID: 1269495318}
   - {fileID: 320894904}

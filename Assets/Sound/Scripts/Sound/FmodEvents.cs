@@ -7,6 +7,7 @@ namespace Sound.Scripts.Sound
     {
         [field: Header("Music")]
         [field: SerializeField] public EventReference Music { get; private set; }
+        [field: SerializeField] public EventReference DeathSound { get; private set; }
         
         [field: Header("Character Noises")]
         [field: SerializeField] public EventReference Walk { get; private set; }
@@ -17,10 +18,15 @@ namespace Sound.Scripts.Sound
         [field: SerializeField] public EventReference Rain { get; private set; }
         [field: SerializeField] public EventReference Vents { get; private set; }
         
-        [field: Header("Tech")]
+        [field: Header("Tech Sounds")]
         [field: SerializeField] public EventReference Mouse { get; private set; }
         [field: SerializeField] public EventReference[] Keyboards { get; private set; }
+        
+        [field: Header("Card Sounds")]
+        [field: SerializeField] public EventReference CardsHover { get; private set; }
+        [field: SerializeField] public EventReference CardsSelect { get; private set; } 
         public static FmodEvents Instance { get; private set; }
+        
 
         private void Awake()
         {
