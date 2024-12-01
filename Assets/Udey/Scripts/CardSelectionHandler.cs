@@ -1,4 +1,5 @@
 using System.Collections;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,11 +14,15 @@ namespace Udey.Scripts
 
         private Vector3 _startPos; //Stores the initial position of the card.
         private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
+        
+        private EventReference _hoverSound;
 
         private void Start() //Also captures the initial position and scale of the card.
         {
             _startPos = transform.position;
             _startScale = transform.localScale;
+            
+            _hoverSound = 
         }
 
         #region Animations
