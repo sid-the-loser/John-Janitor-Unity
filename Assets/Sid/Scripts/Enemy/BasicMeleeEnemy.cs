@@ -14,7 +14,7 @@ namespace Sid.Scripts.Enemy
         private GameObject _player;
         private Rigidbody _rigidbody;
 
-        private FMOD.Studio.Bus _bus;
+        private Bus _bus;
         
         void Start()
         {

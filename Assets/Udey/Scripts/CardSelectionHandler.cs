@@ -1,5 +1,6 @@
 using System.Collections;
-using FMODUnity;
+using FMOD.Studio;
+using Sound.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,31 +15,34 @@ namespace Udey.Scripts
 
         private Vector3 _startPos; //Stores the initial position of the card.
         private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
-        
-        private EventReference _hoverSound;
 
+        private Bus bus;
+        
         private void Start() //Also captures the initial position and scale of the card.
         {
             _startPos = transform.position;
             _startScale = transform.localScale;
             
-            _hoverSound = 
+            bus = FMODUnity.RuntimeManager.GetBus("bus:/");
         }
 
         #region Animations
 
         public void OnDeselect(BaseEventData eventData) //Handles the event when the selection is deselected.
         {
+            bus.stopAllEvents(STOP_MODE.IMMEDIATE);
             StartCoroutine(MoveCards(false));
         }
 
         public void OnPointerEnter(PointerEventData eventData) //Handles the event when the pointer enters the card's area.
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsHover, this.transform.position);
             eventData.selectedObject = gameObject;
         }
 
         public void OnPointerExit(PointerEventData eventData) //Called when the pointer exits the UI element.
         {
+            bus.stopAllEvents(STOP_MODE.IMMEDIATE);
             eventData.selectedObject = null;
         }
 
