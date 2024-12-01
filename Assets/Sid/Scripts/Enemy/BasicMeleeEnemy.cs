@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using FMOD.Studio;
 using Sid.Scripts.Common;
 using Sid.Scripts.Player;
+using Sound.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +17,7 @@ namespace Sid.Scripts.Enemy
         private Rigidbody _rigidbody;
 
         private Bus _bus;
+        private EventInstance PlayerDeath;
         
         void Start()
         {
@@ -22,6 +25,7 @@ namespace Sid.Scripts.Enemy
             _rigidbody = GetComponent<Rigidbody>();
 
             _bus = FMODUnity.RuntimeManager.GetBus("bus:/");
+            PlayerDeath = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.DeathSound);
 
             if (_player is null)
             {
@@ -63,6 +67,14 @@ namespace Sid.Scripts.Enemy
 
                 _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
             }
+        }
+
+        private IEnumerator OnDeath()
+        {
+            PlayerDeath.start();
+            yield return new WaitForSeconds(2f);
+            _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         public static void UpdateStats()

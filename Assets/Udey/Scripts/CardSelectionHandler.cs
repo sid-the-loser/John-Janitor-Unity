@@ -1,8 +1,10 @@
 using System.Collections;
 using FMOD.Studio;
+using FMODUnity;
 using Sound.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Udey.Scripts
 {
@@ -17,6 +19,7 @@ namespace Udey.Scripts
         private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
 
         private Bus bus;
+        private EventInstance CardSelected;
         
         private void Start() //Also captures the initial position and scale of the card.
         {
@@ -24,6 +27,7 @@ namespace Udey.Scripts
             _startScale = transform.localScale;
             
             bus = FMODUnity.RuntimeManager.GetBus("bus:/");
+            CardSelected = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.CardsSelect);
         }
 
         #region Animations
@@ -48,6 +52,12 @@ namespace Udey.Scripts
 
         public void OnSelect(BaseEventData eventData) //Called when the card is selected. Initiates the card movement coroutine to animate the card's position.
         {
+            PLAYBACK_STATE playbackState;
+            CardSelected.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {       
+                CardSelected.start();
+            }
             StartCoroutine(MoveCards(true));
         }
 

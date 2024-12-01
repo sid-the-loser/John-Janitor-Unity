@@ -19,11 +19,6 @@ public class PickUp : MonoBehaviour
     //public Renderer PickUpRender;
     //public Renderer stageRender;
 
-    void start()
-    {
-       
-    }
-    
 
     void OnTriggerStay(Collider other)
     {
