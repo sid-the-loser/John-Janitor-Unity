@@ -120,18 +120,21 @@ namespace Udey.Scripts
 
         public void SelectedCardLeft()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[0].text);
             DeactivateCardDropDown();
             StartCoroutine(startDialogue());
         }
         public void SelectedCardMiddle()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[1].text);
             DeactivateCardDropDown();
             StartCoroutine(startDialogue());
         }
         public void SelectedCardRight()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[2].text);
             DeactivateCardDropDown();
             StartCoroutine(startDialogue());

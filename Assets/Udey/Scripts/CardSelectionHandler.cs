@@ -49,7 +49,6 @@ namespace Udey.Scripts
 
         public void OnSelect(BaseEventData eventData) //Called when the card is selected. Initiates the card movement coroutine to animate the card's position.
         {
-            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             StartCoroutine(MoveCards(true));
         }
 
