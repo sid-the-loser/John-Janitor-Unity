@@ -19,15 +19,12 @@ namespace Udey.Scripts
         private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
 
         private Bus bus;
-        private EventInstance CardSelected;
-        
         private void Start() //Also captures the initial position and scale of the card.
         {
             _startPos = transform.position;
             _startScale = transform.localScale;
             
             bus = FMODUnity.RuntimeManager.GetBus("bus:/");
-            CardSelected = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.CardsSelect);
         }
 
         #region Animations
@@ -52,16 +49,8 @@ namespace Udey.Scripts
 
         public void OnSelect(BaseEventData eventData) //Called when the card is selected. Initiates the card movement coroutine to animate the card's position.
         {
-            StartCoroutine(OnCardSelected());
-        }
-
-        private IEnumerator OnCardSelected()
-        {
             AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
-            yield return new WaitForSeconds(0.5f);
             StartCoroutine(MoveCards(true));
-            yield return new WaitForSeconds(0.5f);
-            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.StartingDialogue, transform.position);
         }
 
         /* Moves the card vertically and scales it up or down over time depending on the value of the parameter.

@@ -7,12 +7,15 @@ namespace Sound.Scripts.Sound
     {
         [field: Header("Music")]
         [field: SerializeField] public EventReference Music { get; private set; }
-        [field: SerializeField] public EventReference DeathSound { get; private set; }
         
         [field: Header("Character Noises")]
         [field: SerializeField] public EventReference Walk { get; private set; }
         [field: SerializeField] public EventReference Throw { get; private set; }
         [field: SerializeField] public EventReference Swing { get; private set; }
+        
+        [field: Header("Injury Sounds")]
+        [field: SerializeField] public EventReference DeathSound { get; private set; }
+        [field: SerializeField] public EventReference HurtSounds { get; private set; }
         
         [field: Header("Ambient Sound")]
         [field: SerializeField] public EventReference Rain { get; private set; }

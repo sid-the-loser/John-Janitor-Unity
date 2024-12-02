@@ -67,10 +67,12 @@ namespace Sid.Scripts.Enemy
 
         private IEnumerator OnDeath()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.HurtSounds, transform.position);
+            yield return new WaitForSeconds(0.2f);
             AudioManager.Instance.PlayOneShot(FmodEvents.Instance.DeathSound, transform.position);
             yield return new WaitForSeconds(2f);
             _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
