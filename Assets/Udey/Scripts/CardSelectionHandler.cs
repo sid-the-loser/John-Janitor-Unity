@@ -31,7 +31,7 @@ namespace Udey.Scripts
 
         public void OnDeselect(BaseEventData eventData) //Handles the event when the selection is deselected.
         {
-            bus.stopAllEvents(STOP_MODE.IMMEDIATE);
+          
             StartCoroutine(MoveCards(false));
         }
 
@@ -43,7 +43,7 @@ namespace Udey.Scripts
 
         public void OnPointerExit(PointerEventData eventData) //Called when the pointer exits the UI element.
         {
-            bus.stopAllEvents(STOP_MODE.IMMEDIATE);
+           
             eventData.selectedObject = null;
         }
 
