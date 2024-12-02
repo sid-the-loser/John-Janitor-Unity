@@ -5,7 +5,7 @@
 			<value>Card Hover</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0159820e-d451-4c87-937c-4594939df1c4}</destination>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{06cacedd-45b4-449f-ac77-e274afab078b}">
+		<property name="volume">
+			<value>-13</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{06142b92-63e2-4104-a61a-6868503fdfc4}</destination>
 		</relationship>
@@ -82,7 +85,11 @@
 			<destination>{94d14408-c8f0-49d5-940f-e41b80ce4539}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{3024dfa8-d971-4bef-a213-13e17f04a91d}" />
+	<object class="MultiSound" id="{3024dfa8-d971-4bef-a213-13e17f04a91d}">
+		<relationship name="sounds">
+			<destination>{9104cbe0-7187-402e-b26e-548128e7c657}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{091eb646-2c5d-4a47-a472-d1f1d1d93323}">
 		<relationship name="effects">
 			<destination>{f9fa6249-d708-4c83-9cf2-784125af1aa4}</destination>
@@ -95,6 +102,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{be8e36f2-d7df-45fa-b383-456aa18269fd}" />
+	<object class="SingleSound" id="{9104cbe0-7187-402e-b26e-548128e7c657}">
+		<relationship name="audioFile">
+			<destination>{4f8891cf-57d9-4542-9193-9e73c2a398cc}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{f9fa6249-d708-4c83-9cf2-784125af1aa4}" />
 	<object class="MixerBusFader" id="{e4a7841c-338a-4874-8ed8-ba7494be6dbe}" />
 </objects>
