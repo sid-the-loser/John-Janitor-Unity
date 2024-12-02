@@ -17,7 +17,6 @@ namespace Sid.Scripts.Enemy
         private Rigidbody _rigidbody;
 
         private Bus _bus;
-        private EventInstance PlayerDeath;
         
         void Start()
         {
@@ -25,7 +24,6 @@ namespace Sid.Scripts.Enemy
             _rigidbody = GetComponent<Rigidbody>();
 
             _bus = FMODUnity.RuntimeManager.GetBus("bus:/");
-            PlayerDeath = AudioManager.Instance.CreateEventInstance(FmodEvents.Instance.DeathSound);
 
             if (_player is null)
             {
@@ -63,17 +61,16 @@ namespace Sid.Scripts.Enemy
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-                _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
+                StartCoroutine(OnDeath());
             }
         }
 
         private IEnumerator OnDeath()
         {
-            PlayerDeath.start();
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.DeathSound, transform.position);
             yield return new WaitForSeconds(2f);
             _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
+            yield return new WaitForSeconds(0.5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 

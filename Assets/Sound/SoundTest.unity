@@ -3222,6 +3222,13 @@ MonoBehaviour:
       Data3: -270394694
       Data4: -762123829
     Path: event:/SFX/Card Selection/Caed Selection
+  <StartingDialogue>k__BackingField:
+    Guid:
+      Data1: -1744981380
+      Data2: 1227254401
+      Data3: -1726583632
+      Data4: 1062634204
+    Path: event:/Music/Dialuge
 --- !u!4 &383772534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7616579037371484840, guid: 0d9761d063b193747ad5ec0bb36a0b6d, type: 3}

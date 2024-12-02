@@ -40,7 +40,7 @@ namespace Udey.Scripts
 
         public void OnPointerEnter(PointerEventData eventData) //Handles the event when the pointer enters the card's area.
         {
-            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsHover, this.transform.position);
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsHover, transform.position);
             eventData.selectedObject = gameObject;
         }
 
@@ -52,13 +52,16 @@ namespace Udey.Scripts
 
         public void OnSelect(BaseEventData eventData) //Called when the card is selected. Initiates the card movement coroutine to animate the card's position.
         {
-            PLAYBACK_STATE playbackState;
-            CardSelected.getPlaybackState(out playbackState);
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-            {       
-                CardSelected.start();
-            }
+            StartCoroutine(OnCardSelected());
+        }
+
+        private IEnumerator OnCardSelected()
+        {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
+            yield return new WaitForSeconds(0.5f);
             StartCoroutine(MoveCards(true));
+            yield return new WaitForSeconds(0.5f);
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.StartingDialogue, transform.position);
         }
 
         /* Moves the card vertically and scales it up or down over time depending on the value of the parameter.

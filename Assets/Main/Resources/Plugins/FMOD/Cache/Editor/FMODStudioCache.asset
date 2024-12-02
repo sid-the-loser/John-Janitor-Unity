@@ -147,10 +147,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master/Master.strings
-  lastModified: 638686711609686282
+  lastModified: 638686842932157072
   FileSizes:
   - Name: Desktop
-    Value: 1626
+    Value: 1674
   Exists: 1
 --- !u!114 &-138212091845487712
 MonoBehaviour:
@@ -194,10 +194,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master/Master
-  lastModified: 638686711609656282
+  lastModified: 638686842932137072
   FileSizes:
   - Name: Desktop
-    Value: 2271264
+    Value: 2272480
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -230,12 +230,13 @@ MonoBehaviour:
   - {fileID: -5406559079558375333}
   - {fileID: 8244770652799309220}
   - {fileID: 5047529230263454820}
+  - {fileID: 9107596900096888515}
   EditorParameters: []
   MasterBanks:
   - {fileID: -71846910593386838}
   StringsBanks:
   - {fileID: -892258955050307713}
-  cacheTime: 638686715789082989
+  cacheTime: 638686842932157072
   cacheVersion: 131620
 --- !u!114 &988491805819331257
 MonoBehaviour:
@@ -519,3 +520,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 383282
+--- !u!114 &9107596900096888515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Dialuge
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Dialuge
+  Guid:
+    Data1: -1744981380
+    Data2: 1227254401
+    Data3: -1726583632
+    Data4: 1062634204
+  Banks:
+  - {fileID: -71846910593386838}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
