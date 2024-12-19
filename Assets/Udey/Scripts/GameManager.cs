@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sid.Scripts.Common;
 using Sid.Scripts.Enemy;
+using Sound.Scripts.Sound;
 using UnityEngine;
 using TMPro;
 using Random = UnityEngine.Random;
@@ -51,6 +53,11 @@ namespace Udey.Scripts
             }
         }
         
+        private IEnumerator startDialogue()
+        {
+            yield return new WaitForSeconds(1f);
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.StartingDialogue, transform.position);
+        }
 
         #region RNG
 
@@ -113,18 +120,24 @@ namespace Udey.Scripts
 
         public void SelectedCardLeft()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[0].text);
             DeactivateCardDropDown();
+            StartCoroutine(startDialogue());
         }
         public void SelectedCardMiddle()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[1].text);
             DeactivateCardDropDown();
+            StartCoroutine(startDialogue());
         }
         public void SelectedCardRight()
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsSelect, transform.position);
             ChangeStats(descriptions[2].text);
             DeactivateCardDropDown();
+            StartCoroutine(startDialogue());
         }
         private void ChangeStats(string pickedOption)
         {

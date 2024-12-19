@@ -1,6 +1,6 @@
 using Sid.Scripts.Common;
+using Sound.Scripts.Sound;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WinCon : MonoBehaviour
 {
@@ -9,10 +9,14 @@ public class WinCon : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GlobalVariables.Paused = true;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            winScreen.SetActive(true);
+            Win();
         }
+    }
+    public void Win()
+    {
+        GlobalVariables.Paused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        winScreen.SetActive(true);
     }
 }

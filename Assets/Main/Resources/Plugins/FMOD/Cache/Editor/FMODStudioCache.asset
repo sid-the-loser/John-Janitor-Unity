@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5686006785885398959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Dialogue+
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Dialogue+
+  Guid:
+    Data1: 1773095481
+    Data2: 1108026170
+    Data3: 536702108
+    Data4: 921644591
+  Banks:
+  - {fileID: -71846910593386838}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4953001100631194886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
+--- !u!114 &-4566482968074214232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Noises/Injuries/Death Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Character Noises/Injuries/Death Sound
+  Guid:
+    Data1: -2027091958
+    Data2: 1193458681
+    Data3: -779741777
+    Data4: -1159706397
+  Banks:
+  - {fileID: 6479014261499949559}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4288411996330592865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,10 +174,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master/Master.strings
-  lastModified: 638669583904403777
+  lastModified: 638686951209416250
   FileSizes:
   - Name: Desktop
-    Value: 1460
+    Value: 1724
   Exists: 1
 --- !u!114 &-138212091845487712
 MonoBehaviour:
@@ -167,10 +221,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master/Master
-  lastModified: 638669583904393776
+  lastModified: 638686951209416250
   FileSizes:
   - Name: Desktop
-    Value: 2270336
+    Value: 2570912
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -200,12 +254,17 @@ MonoBehaviour:
   - {fileID: 5218549419730666201}
   - {fileID: 5411240508818433094}
   - {fileID: -4288411996330592865}
+  - {fileID: 8244770652799309220}
+  - {fileID: 5047529230263454820}
+  - {fileID: -5686006785885398959}
+  - {fileID: -4566482968074214232}
+  - {fileID: 8495260752541617715}
   EditorParameters: []
   MasterBanks:
   - {fileID: -71846910593386838}
   StringsBanks:
   - {fileID: -892258955050307713}
-  cacheTime: 638669583904966690
+  cacheTime: 638686951209566387
   cacheVersion: 131620
 --- !u!114 &988491805819331257
 MonoBehaviour:
@@ -258,6 +317,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5047529230263454820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Card Selection/Card Hover
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Card Selection/Card Hover
+  Guid:
+    Data1: 1821610975
+    Data2: 1285143301
+    Data3: -881051517
+    Data4: 455019610
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5188721574356480841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,10 +359,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/Master/SFX
-  lastModified: 638669583904966690
+  lastModified: 638686951209566387
   FileSizes:
   - Name: Desktop
-    Value: 5984000
+    Value: 5991072
   Exists: 1
 --- !u!114 &5218549419730666201
 MonoBehaviour:
@@ -347,10 +433,10 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Character.bank
   Name: Character
   StudioPath: bank:/Master/Character
-  lastModified: 638669583904184723
+  lastModified: 638686951209346187
   FileSizes:
   - Name: Desktop
-    Value: 33984
+    Value: 185952
   Exists: 1
 --- !u!114 &7517778355104351651
 MonoBehaviour:
@@ -406,6 +492,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
+--- !u!114 &8244770652799309220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Card Selection/Caed Selection
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Card Selection/Caed Selection
+  Guid:
+    Data1: 945929587
+    Data2: 1134399371
+    Data3: -270394694
+    Data4: -762123829
+  Banks:
+  - {fileID: 5188721574356480841}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8495260752541617715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Noises/Injuries/Get Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Character Noises/Injuries/Get Hit
+  Guid:
+    Data1: 13344939
+    Data2: 1202832754
+    Data3: 796788152
+    Data4: 1022645905
+  Banks:
+  - {fileID: 6479014261499949559}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &9039492944943728958
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using FMOD.Studio;
 using Sid.Scripts.Common;
 using Sid.Scripts.Player;
+using Sound.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,11 +15,15 @@ namespace Sid.Scripts.Enemy
         
         private GameObject _player;
         private Rigidbody _rigidbody;
+
+        private Bus _bus;
         
         void Start()
         {
             _player = GameObject.FindWithTag("Player");
             _rigidbody = GetComponent<Rigidbody>();
+
+            _bus = FMODUnity.RuntimeManager.GetBus("bus:/");
 
             if (_player is null)
             {
@@ -54,8 +61,19 @@ namespace Sid.Scripts.Enemy
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                StartCoroutine(OnDeath());
             }
+        }
+
+        private IEnumerator OnDeath()
+        {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.HurtSounds, transform.position);
+            yield return new WaitForSeconds(0.2f);
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.DeathSound, transform.position);
+            yield return new WaitForSeconds(2f);
+            _bus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
+            yield return new WaitForSeconds(0.2f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         public static void UpdateStats()

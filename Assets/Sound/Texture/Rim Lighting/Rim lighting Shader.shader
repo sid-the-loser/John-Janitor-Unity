@@ -7,6 +7,9 @@ Shader "Custom/Rim lighting Shader"
         _RimPower("Rim Power", Range(0.5, 8.0)) = 3.0
         _RampTex("Ramp Texture", 2D) = "White" {}
         _ActiveRim("Active Rim", Range(0, 1)) = 1
+        
+        _OutlineColor ("Outline Color", Color) = (0,0,0,1)
+        _Outline ("Outline Width", Range(.002,0.1)) = 0.005
     }
     SubShader
     {

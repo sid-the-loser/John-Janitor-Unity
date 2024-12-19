@@ -1,6 +1,10 @@
 using System.Collections;
+using FMOD.Studio;
+using FMODUnity;
+using Sound.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Udey.Scripts
 {
@@ -14,26 +18,32 @@ namespace Udey.Scripts
         private Vector3 _startPos; //Stores the initial position of the card.
         private Vector3 _startScale; //Stores the initial scale of the card before any transformations are applied.
 
+        private Bus bus;
         private void Start() //Also captures the initial position and scale of the card.
         {
             _startPos = transform.position;
             _startScale = transform.localScale;
+            
+            bus = FMODUnity.RuntimeManager.GetBus("bus:/");
         }
 
         #region Animations
 
         public void OnDeselect(BaseEventData eventData) //Handles the event when the selection is deselected.
         {
+          
             StartCoroutine(MoveCards(false));
         }
 
         public void OnPointerEnter(PointerEventData eventData) //Handles the event when the pointer enters the card's area.
         {
+            AudioManager.Instance.PlayOneShot(FmodEvents.Instance.CardsHover, transform.position);
             eventData.selectedObject = gameObject;
         }
 
         public void OnPointerExit(PointerEventData eventData) //Called when the pointer exits the UI element.
         {
+           
             eventData.selectedObject = null;
         }
 
